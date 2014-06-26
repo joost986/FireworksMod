@@ -1,0 +1,16 @@
+[
+{
+  "modid": "fireworksmod",
+  "name": "Fireworks Mod",
+  "description": "A mod wich adds a custom fireworks block.",
+  "version": "0.1.0",
+  "logoFile": "",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Joost986"],
+  "credits": "Credits goes to Joost986",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
