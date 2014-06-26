@@ -25,7 +25,7 @@ public class FireworksMod
 	@Mod.Instance(Reference.MODID)
 	public static FireworksMod instance;
 
-	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
+	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 
 	@Mod.EventHandler

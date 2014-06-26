@@ -11,5 +11,5 @@ public class Reference
 	public static final String CREATIVETAB_NAME = "assets/fireworksmod";
 
 	public static final String CLIENT_PROXY_CLASS = "com.joost986.fireworksmod.proxy.ClientProxy";
-	public static final String COMMON_PROXY_CLASS = "com.joost986.fireworksmod.proxy.CommonProxy";
+	public static final String SERVER_PROXY_CLASS = "com.joost986.fireworksmod.proxy.ServerProxy";
 }
