@@ -1,4 +1,4 @@
-package com.joost986.fireworksmod.block;
+package com.joost986.fireworksmod.blocks;
 
 import com.joost986.fireworksmod.creativetab.CreativeTab;
 import cpw.mods.fml.relauncher.Side;
@@ -24,6 +24,7 @@ public abstract class BlockBase extends Block
 		super(material);
 		this.setCreativeTab(CreativeTab.tabFireworksMod);
 	}
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public abstract void registerBlockIcons(IIconRegister iconRegister);

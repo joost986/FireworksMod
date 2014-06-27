@@ -1,4 +1,4 @@
-package com.joost986.fireworksmod.block;
+package com.joost986.fireworksmod.blocks;
 
 import com.joost986.fireworksmod.reference.Names;
 import com.joost986.fireworksmod.reference.Textures;

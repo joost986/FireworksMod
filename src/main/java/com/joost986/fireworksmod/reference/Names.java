@@ -8,6 +8,6 @@ public class Names
 	}
 	public static class Items
 	{
-
+		public static final String FIREWORK = "Firework";
 	}
 }

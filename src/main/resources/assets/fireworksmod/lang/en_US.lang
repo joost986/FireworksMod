@@ -3,3 +3,5 @@
 itemGroup.tabFireworksMod=Fireworks Mod
 #blocks
 tile.FireworkDisplay.name=Firework Display
+#items
+item.Firework.name=Firework
