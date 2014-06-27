@@ -4,9 +4,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
-/**
- * Created by joost986 on 25-6-2014.
- */
 public class CreativeTab
 {
 	public static CreativeTabs tabFireworksMod;

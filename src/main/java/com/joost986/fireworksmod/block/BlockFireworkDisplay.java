@@ -8,23 +8,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
-/**
- * Created by joost986 on 20-6-2014.
- */
 public class BlockFireworkDisplay extends BlockBase
 {
-	public IIcon topTexture;
-	public IIcon bottomTexture;
-	public IIcon[] sideTexture;
-	public IIcon icon;
-
-	public BlockFireworkDisplay()
-	{
-		super(Material.iron);
-		this.setHardness(2F);
-		this.setBlockName(Names.Blocks.FIREWORKDISPLAY);
-	}
-
 	@SideOnly(Side.CLIENT)
 	private IIcon topIcon;
 	@SideOnly(Side.CLIENT)
@@ -32,6 +17,12 @@ public class BlockFireworkDisplay extends BlockBase
 	@SideOnly(Side.CLIENT)
 	private IIcon bottomIcon;
 
+	public BlockFireworkDisplay()
+	{
+		super(Material.iron);
+		this.setHardness(2F);
+		this.setBlockName(Names.Blocks.FIREWORKDISPLAY);
+	}
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister register) {

@@ -8,13 +8,13 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
-/**
- * Created by joost986 on 24-6-2014.
- */
 public abstract class BlockBase extends Block
 {
+	@SuppressWarnings("unused")
+	@SideOnly(Side.CLIENT)
 	private IIcon blockIcon;
 
+	@SuppressWarnings("unused")
 	public BlockBase()
 	{
 		this(Material.iron);

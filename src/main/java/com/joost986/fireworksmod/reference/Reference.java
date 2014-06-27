@@ -1,8 +1,5 @@
 package com.joost986.fireworksmod.reference;
 
-/**
- * Created by joost986 on 20-6-2014.
- */
 public class Reference
 {
 	public static final String MODID = "fireworksmod";

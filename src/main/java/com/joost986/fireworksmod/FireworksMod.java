@@ -10,10 +10,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-/**
- * Created by joost986 on 20-6-2014.
- */
-
 @Mod(
 		modid = Reference.MODID
 		, name = Reference.NAME
@@ -21,24 +17,26 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 )
 public class FireworksMod
 {
-
 	@Mod.Instance(Reference.MODID)
 	public static FireworksMod instance;
 
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 
+	@SuppressWarnings("unused")
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		CreativeTab.init();
 		ModBlocks.init();
 	}
+	@SuppressWarnings("unused")
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
 	{
 
 	}
+	@SuppressWarnings("unused")
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{

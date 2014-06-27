@@ -5,9 +5,6 @@ import com.joost986.fireworksmod.block.BlockFireworkDisplay;
 import com.joost986.fireworksmod.reference.Names;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-/**
- * Created by joost986 on 21-6-2014.
- */
 public class ModBlocks
 {
 	public static void init()
