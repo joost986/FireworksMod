@@ -1,7 +1,6 @@
 package com.joost986.fireworksmod.block;
 
 import com.joost986.fireworksmod.reference.Names;
-import com.joost986.fireworksmod.reference.Reference;
 import com.joost986.fireworksmod.reference.Textures;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -12,7 +11,7 @@ import net.minecraft.util.IIcon;
 /**
  * Created by joost986 on 20-6-2014.
  */
-public class BlockFireworkDisplay extends BlockFireworksMod
+public class BlockFireworkDisplay extends BlockBase
 {
 	public IIcon topTexture;
 	public IIcon bottomTexture;
@@ -25,35 +24,37 @@ public class BlockFireworkDisplay extends BlockFireworksMod
 		this.setHardness(2F);
 		this.setBlockName(Names.Blocks.FIREWORKDISPLAY);
 	}
-	
 
+	@SideOnly(Side.CLIENT)
+	private IIcon topIcon;
+	@SideOnly(Side.CLIENT)
+	private IIcon[] sideIcons;
+	@SideOnly(Side.CLIENT)
+	private IIcon bottomIcon;
 
-//	@Override
-//	@SideOnly(Side.CLIENT)
-//	public void registerBlockIcons(IIconRegister iconRegister) {
-//		this.topTexture = iconRegister.registerIcon(Textures.RESOURCE_PREFIX + ":" + Textures.Blocks.FIREWORKDISPLAY_TOP);
-//		this.bottomTexture = iconRegister.registerIcon(Textures.RESOURCE_PREFIX + ":" + Textures.Blocks.FIREWORKDISPLAY_BOTTOM);
-//		sideTexture = new IIcon[Textures.Blocks.FIREWORKDISPLAY_SIDES.length];
-//		for(int i = 0; i<sideTexture.length; i++)
-//		{
-//			this.sideTexture[i] = iconRegister.registerIcon(Textures.RESOURCE_PREFIX + ":" + Textures.Blocks.FIREWORKDISPLAY_SIDES[i]);
-//		}
-//	}
-//
-//	@Override
-//	@SideOnly(Side.CLIENT)
-//	public IIcon getIcon(int side, int meta) {
-//		if (side==0)
-//		{
-//			return bottomTexture;
-//		}
-//		else if (side ==1)
-//		{
-//			return topTexture;
-//		}
-//		else
-//		{
-//			return sideTexture[meta];
-//		}
-//	}
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons(IIconRegister register) {
+		topIcon = register.registerIcon(Textures.RESOURCE_PREFIX + ":"
+				+ Textures.Blocks.FIREWORKDISPLAY_TOP);
+		sideIcons = new IIcon[Textures.Blocks.FIREWORKDISPLAY_SIDES.length];
+		for (int i = 0; i < sideIcons.length; i++) {
+			sideIcons[i] = register.registerIcon(Textures.RESOURCE_PREFIX
+					+ ":" + Textures.Blocks.FIREWORKDISPLAY_SIDES[i]);
+		}
+		bottomIcon = register.registerIcon(Textures.RESOURCE_PREFIX + ":"
+				+ Textures.Blocks.FIREWORKDISPLAY_BOTTOM);
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon(int side, int meta) {
+		if (side == 0) {
+			return bottomIcon;
+		} else if (side == 1) {
+			return topIcon;
+		} else {
+			return sideIcons[meta];
+		}
+	}
 }
