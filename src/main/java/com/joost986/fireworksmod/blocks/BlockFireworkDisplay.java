@@ -1,14 +1,18 @@
 package com.joost986.fireworksmod.blocks;
 
+import com.joost986.fireworksmod.FireworksMod;
+import com.joost986.fireworksmod.reference.GuiIDs;
 import com.joost986.fireworksmod.reference.Names;
 import com.joost986.fireworksmod.reference.Textures;
+import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.World;
 
-public class BlockFireworkDisplay extends BlockBase
+public class BlockFireworkDisplay extends BlockContainerBase
 {
 	@SideOnly(Side.CLIENT)
 	private IIcon topIcon;
@@ -19,7 +23,6 @@ public class BlockFireworkDisplay extends BlockBase
 
 	public BlockFireworkDisplay()
 	{
-		super(Material.iron);
 		this.setHardness(2F);
 		this.setBlockName(Names.Blocks.FIREWORKDISPLAY);
 	}
@@ -47,5 +50,13 @@ public class BlockFireworkDisplay extends BlockBase
 		} else {
 			return sideIcons[meta];
 		}
+	}
+
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
+		if (!world.isRemote) {
+			FMLNetworkHandler.openGui(player, FireworksMod.instance, GuiIDs.FIREWORKDISPLAY, world, x, y, z);
+		}
+		return true;
 	}
 }

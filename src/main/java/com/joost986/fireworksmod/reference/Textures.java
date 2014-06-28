@@ -7,7 +7,7 @@ public class Textures {
 	{
 		public static final String FIREWORKDISPLAY_TOP = "fireworkdisplay_top";
 		public static final String FIREWORKDISPLAY_BOTTOM = "fireworkdisplay_bottom";
-		public static final String FIREWORKDISPLAY_SIDES[] = {"fireworkdisplay_side_type1", "fireworkdisplay_side_type2", "fireworkdisplay_side_type3"};
+		public static final String FIREWORKDISPLAY_SIDES[] = {"fireworkdisplay_side_type0", "fireworkdisplay_side_type1", "fireworkdisplay_side_type2", "fireworkdisplay_side_type3"};
 	}
 	public static class Items
 	{

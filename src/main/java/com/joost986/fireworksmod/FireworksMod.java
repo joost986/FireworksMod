@@ -2,6 +2,8 @@ package com.joost986.fireworksmod;
 
 import com.joost986.fireworksmod.Init.ModBlocks;
 import com.joost986.fireworksmod.Init.ModItems;
+import com.joost986.fireworksmod.Init.ModTileEntities;
+import com.joost986.fireworksmod.client.interfaces.GuiHandler;
 import com.joost986.fireworksmod.creativetab.CreativeTab;
 import com.joost986.fireworksmod.proxy.CommonProxy;
 import com.joost986.fireworksmod.reference.Reference;
@@ -30,7 +32,10 @@ public class FireworksMod
 	{
 		CreativeTab.init();
 		ModBlocks.init();
+		ModTileEntities.init();
 		ModItems.init();
+
+		new GuiHandler();
 	}
 	@SuppressWarnings("unused")
 	@Mod.EventHandler

@@ -10,4 +10,8 @@ public class Names
 	{
 		public static final String FIREWORK = "Firework";
 	}
+	public static class TileEntities
+	{
+		public static final String FIREWORKDISPLAY = "TileFireworkDisplay";
+	}
 }

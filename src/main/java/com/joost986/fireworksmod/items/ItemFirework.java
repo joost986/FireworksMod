@@ -55,9 +55,9 @@ public class ItemFirework extends ItemBase
 
 	@Override
 	public boolean onItemUseFirst(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
-		if (!world.isRemote && (world.getBlock(x, y, z).getUnlocalizedName().contains(Names.Blocks.FIREWORKDISPLAY)) && stack.getItemDamage() != world.getBlockMetadata(x, y, z))
+		if (!world.isRemote && (world.getBlock(x, y, z).getUnlocalizedName().contains(Names.Blocks.FIREWORKDISPLAY)) && stack.getItemDamage() != (world.getBlockMetadata(x, y, z) - 1))
 		{
-			world.setBlockMetadataWithNotify(x, y, z, stack.getItemDamage(), 3);
+			world.setBlockMetadataWithNotify(x, y, z, (stack.getItemDamage() + 1), 3);
 			stack.stackSize--;
 			return true;
 		}
