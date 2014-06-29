@@ -8,7 +8,7 @@ public class Names
 	}
 	public static class Items
 	{
-		public static final String FIREWORK = "Firework";
+		public static final String FIREWORKCOLORER = "FireworkColorer";
 	}
 	public static class TileEntities
 	{

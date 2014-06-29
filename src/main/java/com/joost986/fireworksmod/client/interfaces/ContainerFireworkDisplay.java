@@ -26,7 +26,8 @@ public class ContainerFireworkDisplay extends Container
 				addSlotToContainer(new Slot(invPlayer, 9 + x + y * 9, 8 + 18 * x, 51 + y * 18));
 			}
 		}
-		addSlotToContainer(new SlotFirework(fireworkDisplay, 0, 80, 7));
+		addSlotToContainer(new SlotFirework(fireworkDisplay, 0, 80, 30));
+		addSlotToContainer(new SlotFireworkColor(fireworkDisplay, 1, 80, 7));
 	}
 	@Override
 	public boolean canInteractWith(EntityPlayer player) {

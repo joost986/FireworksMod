@@ -11,6 +11,6 @@ public class Textures {
 	}
 	public static class Items
 	{
-		public static final String FIREWORK[] = {"firework_type1", "firework_type2", "firework_type3"};
+		public static final String FIREWORKCOLORER[] = {"firework_type1", "firework_type2", "firework_type3"};
 	}
 }

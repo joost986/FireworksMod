@@ -15,23 +15,23 @@ import net.minecraft.world.World;
 import java.util.List;
 
 
-public class ItemFirework extends ItemBase
+public class ItemFireworkColorer extends ItemBase
 {
 	private IIcon[] icons;
 
-	public ItemFirework()
+	public ItemFireworkColorer()
 	{
-		this.setUnlocalizedName(Names.Items.FIREWORK);
+		this.setUnlocalizedName(Names.Items.FIREWORKCOLORER);
 		this.hasSubtypes = true;
 	}
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister)
 	{
-		icons = new IIcon[Textures.Items.FIREWORK.length];
+		icons = new IIcon[Textures.Items.FIREWORKCOLORER.length];
 		for (int i = 0; i < icons.length; i++)
 		{
-			icons[i] = iconRegister.registerIcon(Textures.RESOURCE_PREFIX + ":" + Textures.Items.FIREWORK[i]);
+			icons[i] = iconRegister.registerIcon(Textures.RESOURCE_PREFIX + ":" + Textures.Items.FIREWORKCOLORER[i]);
 		}
 	}
 	@Override
@@ -45,7 +45,7 @@ public class ItemFirework extends ItemBase
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(Item item, CreativeTabs tabs, List list)
 	{
-		for (int i = 0; i<Textures.Items.FIREWORK.length; i++)
+		for (int i = 0; i<Textures.Items.FIREWORKCOLORER.length; i++)
 		{
 			ItemStack itemstack = new ItemStack(item, 1, i);
 
@@ -53,6 +53,10 @@ public class ItemFirework extends ItemBase
 		}
 	}
 
+	/*
+	* TODO
+	* delete onItemUseFirst and create method of spawning fireworks in the right colour.
+	*/
 	@Override
 	public boolean onItemUseFirst(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ) {
 		if (!world.isRemote && (world.getBlock(x, y, z).getUnlocalizedName().contains(Names.Blocks.FIREWORKDISPLAY)) && stack.getItemDamage() != (world.getBlockMetadata(x, y, z) - 1))

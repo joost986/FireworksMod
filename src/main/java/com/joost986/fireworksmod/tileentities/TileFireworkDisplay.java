@@ -102,13 +102,12 @@ public class TileFireworkDisplay extends TileEntity implements IInventory
 
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		if (i == 0)
-		{
+		if (i == 0) {
 			return itemstack.getUnlocalizedName().equals(Items.fireworks.getUnlocalizedName());
-		}
-		else
-		{
-			return itemstack.getUnlocalizedName().equals(Names.Items.FIREWORK);
+		} else if (i == 1) {
+			return itemstack.getUnlocalizedName().substring(5).equals(Names.Items.FIREWORKCOLORER);
+		} else {
+			return false;
 		}
 	}
 
