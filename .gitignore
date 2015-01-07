@@ -19,6 +19,5 @@
 ## intellij
 /out
 /.idea
-/*.iml
 /*.ipr
 /*.iws
