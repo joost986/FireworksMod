@@ -8,9 +8,14 @@ import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class BlockFireworkDisplay extends BlockContainerBase
 {
@@ -41,6 +46,14 @@ public class BlockFireworkDisplay extends BlockContainerBase
 	}
 
 	@Override
+	public void getSubBlocks(Item item, CreativeTabs tabs, List list) {
+		for (int i = 0; i<Textures.Blocks.FIREWORKDISPLAY_SIDES.length; i++){
+			ItemStack itemstack = new ItemStack(item, 1, i);
+
+			list.add(itemstack);
+		}
+	}
+
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta) {
 		if (side == 0) {
